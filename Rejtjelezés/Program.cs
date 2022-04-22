@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Rejtjelezés
 {
@@ -68,7 +69,7 @@ namespace Rejtjelezés
                 int kkod = 0;
                 int rkod = 0;
                 int jel = 0;
-
+            
                 for (int i = 0; i < rejtuz.Length; i++)
                 {
                     if (rejtuz[i] == ' ')
@@ -117,9 +118,10 @@ namespace Rejtjelezés
             {
                 string kulcs = "";
                 int r1kod = 0;
-
-
+                int r2kod=0;
+        
             }*/
+
             static void Main(string[] args)
             {
                 //1. feladat a)
@@ -145,12 +147,12 @@ namespace Rejtjelezés
                 string berejtuzenet = Console.ReadLine();
 
                 Console.WriteLine("Az eredeti üzenet: {0}", megoldas(bekulcs, berejtuzenet));
-                Console.WriteLine();
-
-                //2. feladat
 
 
+            //2. feladat
+            StreamReader be = new StreamReader("words.txt");
 
+            be.Close();
 
                 Console.ReadKey();
             }
